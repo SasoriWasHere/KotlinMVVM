@@ -1,10 +1,11 @@
-package com.example.kotlinwork
+package com.example.kotlinwork.fragments
 
 import android.os.Bundle
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import com.example.kotlinwork.R
 
 // TODO: Rename parameter arguments, choose names that match
 // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
@@ -46,7 +47,6 @@ class CategoriesFragment : Fragment() {
          * @param param2 Parameter 2.
          * @return A new instance of fragment CategoriesFragment.
          */
-        // TODO: Rename and change types and number of parameters
         @JvmStatic
         fun newInstance(param1: String, param2: String) =
             CategoriesFragment().apply {

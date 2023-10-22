@@ -19,7 +19,7 @@ android {
     }
 
     buildFeatures {
-        dataBinding = true // Enable data binding
+        viewBinding = true// Enable data binding
     }
     buildTypes {
         release {
@@ -42,6 +42,7 @@ android {
 dependencies {
 
     val nav_version = "2.7.4"
+    val lifecycle_version = "2.6.2"
     implementation("androidx.core:core-ktx:1.9.0")
     implementation("androidx.appcompat:appcompat:1.6.1")
     implementation("com.google.android.material:material:1.10.0")
@@ -57,7 +58,23 @@ dependencies {
     implementation("androidx.navigation:navigation-ui-ktx:$nav_version")
 
     implementation("pl.droidsonroids.gif:android-gif-drawable:1.2.28")
-    implementation ("com.intuit.sdp:sdp-android:1.1.0")
-    implementation ("com.intuit.ssp:ssp-android:1.1.0")
+
+    // for text , image size on any mobile devicess!
+    implementation ("com.intuit.sdp:sdp-android:1.0.6")
+    implementation ("com.intuit.ssp:ssp-android:1.0.6")
+
+    // for retrofit to get data from web api so we can transfer them to our application
+    implementation("com.squareup.retrofit2:retrofit:2.9.0")
+    implementation ("com.squareup.retrofit2:converter-gson:2.3.0")
+
+    // for images
+    implementation ("com.github.bumptech.glide:glide:4.12.0")
+
+    // For ViewModel MVVM
+    implementation("androidx.lifecycle:lifecycle-viewmodel-ktx:$lifecycle_version")
+    implementation("androidx.lifecycle:lifecycle-livedata-ktx:$lifecycle_version")
+//    implementation ("androidx.lifecycle:lifecycle-extensions:2.2.0")
+
+//    implementation ("android.arch.lifecycle:extensions:1.1.0")
 
 }
